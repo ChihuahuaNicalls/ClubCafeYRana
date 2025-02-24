@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--primary-color: #4d774e;
+	--background-color: #164a41;
+	--dark-color: #151515;
+}
+
+html {
+    scroll-behavior: smooth;
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Header */
+
+.container-hero {
+	background-color: var(--background-color);
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.container-img {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+    font-size: 3.3rem;
+    display: flex;
+	flex-direction: column;
+    margin-left: 4.5rem;
+}
+
+.logo-img {
+    width: 180px;
+    height: auto; 
+}
+
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+    text-align: center;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 5rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+    text-align: center;
+}
+
+.container-whatsapp {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	cursor: pointer;
+    margin-right: 3.5rem;
+
+}
+
+.whatsapp-link {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	text-decoration: none;
+	color: inherit;
+	background-color: #25D366;
+	padding: 10px 20px;
+	border-radius: 25px;
+}
+
+.whatsapp-link:hover {
+	background-color: #1ebe57;
+}
+
+.whatsapp-link i {
+	font-size: 5rem;
+	color: white;
+}
+
+.content-button {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: white;
+	font-size: 1.6rem;
+	font-weight: bold;
+    flex-direction: column;
+    text-align: center;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Navbar */
+
+.container-navbar {
+    background-color: var(--primary-color);
+    width: 100%;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #4d774ef2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    padding: 1.5rem 0;
+}
+
+.navbar .fa-bars {
+	display: none;
+}
+
+.menu {
+	display: flex;
+    gap: 4.5rem;
+	margin-left: 6rem;
+}
+
+.menu li {
+	list-style: none;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 1.7rem;
+	color: var(--dark-color);
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+	color: #fff;
+}
+
+.menu a::after {
+	content: '';
+	width: 1.5rem;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+	opacity: 1;
+}
+
+.menu a:hover {
+	color: #fff;
+}
+
+/*Nosotros*/
+
+.banner {
+	background-image: linear-gradient(50deg, #000000, #00000020),
+		url('Bolirana.jpg');
+	height: 40rem;
+	background-size: cover;
+	background-position: center;
+}
+
+.content-banner {
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 12rem 0;
+}
+
+.content-banner p {
+	color: var(--primary-color);
+	font-size: 4rem;
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+
+.content-banner h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-top: 2rem;
+}
+
+.content-banner a {
+	margin-top: 2rem;
+	text-decoration: none;
+	color: #fff;
+	background-color: var(--primary-color);
+	display: inline-block;
+	padding: 1rem 3rem;
+	text-transform: uppercase;
+	border-radius: 3rem;
+}
+
+/*Ubicacion*/
+
+.Ubicacion {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2rem 0;
+	background-color: var(--background-color);
+}
+
+.btn-maps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: fit-content;
+}
+
+.btn-maps:hover {
+    background-color: #0056b3;
+}
+
+.btn-maps i {
+    font-size: 2.5rem;
+}
+
+.container-map {
+	width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container-map iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
+/* Precios */
+
+.Precios {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+	background-color: var(--primary-color);
+}
+
+.precio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px #0000001a;
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+    min-height: 250px;
+}
+
+.precio-item i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.precio-item h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+	color: #fff;
+}
+
+.precio-item ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+	color: #fff;
+}
+
+.precio-item p,
+.precio-item ul li {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+	color: #fff;
+}
+
+/* Horarios */
+
+.Horarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+}
+
+.horario-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 98%;
+    min-height: 250px;
+    text-align: center;
+}
+
+.horario-item i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.horario-item h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+	color: #fff;
+}
+
+.horario-item ul {
+    list-style-type: none;
+    padding: 0;
+	color: #fff;
+}
+
+.horario-item ul li {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+	color: #fff;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: nowrap;
+}
+
+.container-footer div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.container-footer i {
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-img {
+        margin-left: 0;
+    }
+
+    .container-logo {
+        flex-grow: 1;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container-whatsapp {
+        margin-right: 0;
+    }
+
+    .whatsapp-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .content-button {
+        flex-direction: column;
+        text-align: center;
+    }
+
+	.menu {
+        margin-left: 2rem;
+    }
+
+	.content-banner {
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+
+    .content-banner p {
+        font-size: 2.5rem;
+    }
+
+    .content-banner h2 {
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+
+    .content-banner a {
+        font-size: 1.6rem;
+        padding: 0.8rem 2rem;
+    }
+	
+    .Precios, .Horarios {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .precio-item, .horario-item {
+        width: 90%;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .horario-item {
+        padding: 1.5rem;
+    }
+
+    .container-map iframe {
+        height: 300px;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .container-footer div {
+        font-size: 1.4rem;
+    }
+}
